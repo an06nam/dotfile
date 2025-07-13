@@ -17,26 +17,33 @@ get_os() {
 DISTRO_NAME="$(get_os)"
 
 setup_archLinux() {
-  echo "OK"
+  echo "SETUP YOUR "$DISTRO_NAME"
+  sudo pacman -Syu \
+  	neovim \
+  	chromium \
+  	git wget curl \
+  	gcc make cmake \
+  	docker docker-compose docker-buildx \
+  	ca-certificates \
+  	i3 rofi feh pipewire terminator brightnessctl \
+  	python-pip python-virtualenv \
+  	-y
 }
 
 setup_ubuntu() {
-  echo "OK"
+  echo "SETUP YOUR "$DISTRO_NAME"
 }
 
 setup_debian() {
-  echo "OK"
+  echo "SETUP YOUR "$DISTRO_NAME"
 }
 
 setup_almalinux() {
-  echo "OK"  
+  echo "SETUP YOUR "$DISTRO_NAME"
 }
 
 if [ "$DISTRO_NAME" = "Arch Linux" ] || [ "$DISTRO_NAME" = "Ubuntu" ] || [ "$DISTRO_NAME" = "Debian" ] || [ "$DISTRO_NAME" = "AlmaLinux" ] || [ "$DISTRO_NAME" = "Fedora" ]; then
-  echo "Wait A moment..."
-  sleep 1
-  echo "Maybe grab some coffe..."
-  sleep 1
+  echo "DISTRO ARE SUPPORTED"
 else
   echo "your distro not supported at the moment"
 fi
@@ -61,15 +68,3 @@ case "$DISTRO_NAME" in
     ;;
 esac
 
-#sudo pacman -Syu \
-#	neovim \
-#	chrome \
-#	git wget curl \
-#	gcc make cmake \
-#	docker docker-compose docker-buildx \
-#	ca-certificates \
-#  # Desktop
-#	i3 rofi feh pipewire terminator \
-#	python-pip python-virtualenv \
-#	-y
-#
