@@ -20,13 +20,14 @@ set $menu rofi -show drun
 
 include /etc/sway/config-vars.d/*
 
+exec_always swaybg -i ~/Downloads/1291412.jpg --m stretch
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # This is commented in Debian, because the Sway wallpaper files are in a separate
 # package `sway-backgrounds`. Installing this package drops a config file to
 # /etc/sway/config.d/
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /home/user/Downloads/1291412.jpg fill
 #
 # Example configuration:
 #
